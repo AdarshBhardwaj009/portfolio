@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Certifications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .image-container {
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fallback-icon {
+            font-size: 3rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body class="bg-[#001133] min-h-screen">
+    <!-- Navigation Bar -->
+    <header class="bg-blue-600 text-white shadow-md py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <h1 class="text-2xl font-bold">My Portfolio</h1>
+        <nav>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="index.html" class="hover:text-gray-300">About Me</a></li>
+                <li><a href="resume.html" class="hover:text-gray-300">Resume</a></li>
+                <li><a href="projects.html" class="hover:text-gray-300">Projects</a></li>
+                <li><a href="certifications.html" class="text-black font-semibold hover:text-gray-300">Certifications</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-gray-300">Others</a>
+                    <ul class="absolute bg-white text-black mt-2 rounded-md shadow-lg hidden group-hover:block right-0 z-50 w-40">
+                        <li><a href="contact.html" class="block px-4 py-2 hover:bg-gray-200">Contacts</a></li>
+                        <!-- <li><a href="blog.html" class="block px-4 py-2 hover:bg-gray-200">Blogs</a></li> -->
+                        <li><a href="experience.html" class="block px-4 py-2 hover:bg-gray-200">Experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <script>
+        // Better error handling for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainers = document.querySelectorAll('.image-container');
+            
+            imageContainers.forEach(container => {
+                const img = container.querySelector('img');
+                if (img) {
+                    img.onerror = function() {
+                        const fallback = document.createElement('div');
+                        fallback.className = 'fallback-icon';
+                        
+                        // Determine appropriate fallback icon based on context
+                        if (img.alt.includes('Certificate') || container.closest('section').querySelector('h2').textContent.includes('Certifications')) {
+                            fallback.textContent = '🏆'; // Trophy for certificates
+                        } else {
+                            fallback.textContent = '📝'; // Pencil for projects
+                        }
+                        
+                        // Replace the image with fallback
+                        container.innerHTML = '';
+                        container.appendChild(fallback);
+                    };
+                }
+            });
+        });
+    </script>
+</body>
+</html>

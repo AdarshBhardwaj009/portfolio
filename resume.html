@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    .group:hover .group-hover\\:block {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-[#001133] text-white font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white shadow-md py-4 px-6 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+    <h1 class="text-2xl font-bold">My Portfolio</h1>
+    
+    <nav>
+      <ul class="flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-gray-300">About Me</a></li>
+        <li><a href="resume.html" class="hover:text-gray-300">Resume</a></li>
+        <li><a href="projects.html" class="hover:text-gray-300">Projects</a></li>
+        <li><a href="certifications.html" class="hover:text-gray-300">Certifications</a></li>
+        <li class="relative group">
+          <a href="#" class="hover:text-gray-300">Others</a>
+          <ul class="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white text-black shadow-md rounded-lg py-2 space-y-2 w-44 hidden group-hover:block z-50">
+            <!-- <li><a href="blogs.html" class="block px-4 py-2 hover:bg-gray-200">Blogs</a></li> -->
+            <li><a href="experience.html" class="block px-4 py-2 hover:bg-gray-200">Experience</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="C:\Users\Adarsh Bhardwaj\Desktop\Portfolio\Portfolio\Dir1\GeneralizedCV.pdf.pdf" download class="ml-4 bg-white text-blue-600 font-semibold px-4 py-2 rounded hover:bg-gray-100 transition">
+      Download Generalized CV
+    </a>
+    <a href="C:\Users\Adarsh Bhardwaj\Desktop\Portfolio\Portfolio\Dir1\SpecializedCV.pdf.pdf (1).pdf" download class="ml-4 bg-white text-blue-600 font-semibold px-4 py-2 rounded hover:bg-gray-100 transition">
+      Download Specialized CV
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-6 pt-32 pb-16 space-y-16">
+    <!-- Education -->
+    <section>
+      <h2 class="text-2xl font-bold border-b border-gray-400 pb-2 mb-4">Education</h2>
+      <p class="text-lg">
+        🎓 <strong>B.Tech in Computer Science and Technology</strong><br>
+        Lovely Professional University, Punjab<br>
+        <span class="text-gray-400 text-sm">Graduation: 2026</span>
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="text-2xl font-bold border-b border-gray-400 pb-2 mb-4">Skills</h2>
+      <ul class="grid grid-cols-2 gap-2 list-disc list-inside text-lg">
+        <li>C++</li>
+        <li>Java Programming</li>
+        <li>kali linux</li>
+        <li>Communication, Teamwork & Project Management</li>
+        <li>Web Development</li>
+        <li>Version Control - Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="text-2xl font-bold border-b border-gray-400 pb-2 mb-4">Projects</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xl font-semibold">Food Delivery Website</h3>
+          <p class="text-gray-300">I designed and developed a responsive food delivery website using HTML, CSS,and JavaScript.
+            <br> The platform allows users to browse restaurants, view menus, place orders, and track delivery status in real-time.<br> It features user authentication, a dynamic admin dashboard for managing orders and restaurant listings, and an intuitive interface focused on user experience.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Phishing Website Detection System</h3>
+          <p class="text-gray-300">
+            Developed a web-based system to detect phishing websites using URL analysis and machine learning algorithms.<br> Implemented URL feature extraction with C++ to classify suspicious links.<br>Achieved 95% accuracy using Logistic Regression and Random Forest models.<br> Built a Flask-based GUI for user-friendly phishing link validation.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold"> Performed SQL Injection</h3>
+          <p class="text-gray-300">
+            Conducted SQL Injection testing as part of ethical hacking engagements to identify vulnerabilities in web applications and Databases.<br>Utilized tools like SQL Map and Burp Suite to execute SQL Injection attacks, successfully extracting sensitive data.<br> Successfully identified and documented SQL Injection vulnerabilities in multiple web applications, providing detailed reports for remediation.<br> Analyzed application behavior and database responses to determine the impact of SQL Injection vulnerabilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+      <h2 class="text-2xl font-bold border-b border-gray-400 pb-2 mb-4">Certifications</h2>
+      <ul class="list-disc list-inside text-lg">
+        <li>Cloud Computing | NPTEL Nov' 2024  </li>
+        <li>Cyber Security and Ethical Hacking | Board Infinity July' 2024</li>
+        <li>Ethical Hacking Essentials (EHE)   | EC-Council  | Coursera Nov' 2024 </li>
+        <li>Digital Forensics Essentials (DFE) | EC-Council  | Coursera Nov' 2024</li>
+      </ul>
+    </section>
+
+    <!-- Extracurriculars -->
+    <section>
+      <h2 class="text-2xl font-bold border-b border-gray-400 pb-2 mb-4">Extracurriculars</h2>
+      <p class="text-lg">
+        👨‍🏫 NSS Volunteer – Actively involved in community initiatives and service.<br>
+        🏅 Achieved 3-star rating in C++ Hacker Rank.
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>
